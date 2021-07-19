@@ -1,7 +1,7 @@
 {
-    "name": "laravel/sanctum",
-    "description": "Laravel Sanctum provides a featherweight authentication system for SPAs and simple APIs.",
-    "keywords": ["laravel", "sanctum", "auth"],
+    "name": "zainaldeen/sanctum",
+    "description": "Provide refresh token for Laravel Sanctum wich provides a featherweight authentication system for SPAs and simple APIs.",
+    "keywords": ["laravel", "sanctum", "auth", "refresh token"],
     "license": "MIT",
     "support": {
         "issues": "https://github.com/laravel/sanctum/issues",
@@ -9,8 +9,8 @@
     },
     "authors": [
         {
-            "name": "Taylor Otwell",
-            "email": "taylor@laravel.com"
+            "name": "Zain Aldeen Fayod",
+            "email": "zainaldeenfayod@gmail.com"
         }
     ],
     "require": {
@@ -27,21 +27,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Laravel\\Sanctum\\": "src/"
+            "Zainaldeen\\Sanctum\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Laravel\\Sanctum\\Tests\\": "tests/"
+            "Zainaldeen\\Sanctum\\Tests\\": "tests/"
         }
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "2.x-dev"
-        },
         "laravel": {
             "providers": [
-                "Laravel\\Sanctum\\SanctumServiceProvider"
+                "Zainaldeen\\Sanctum\\SanctumServiceProvider"
             ]
         }
     },

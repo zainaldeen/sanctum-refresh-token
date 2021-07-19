@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Sanctum\Contracts;
+namespace Zainaldeen\Sanctum\Contracts;
 
 interface HasApiTokens
 {
@@ -24,22 +24,22 @@ interface HasApiTokens
      *
      * @param  string  $name
      * @param  array  $abilities
-     * @return \Laravel\Sanctum\NewAccessToken
+     * @return \Zainaldeen\Sanctum\NewAccessToken
      */
     public function createToken(string $name, array $abilities = ['*']);
 
     /**
      * Get the access token currently associated with the user.
      *
-     * @return \Laravel\Sanctum\Contracts\HasAbilities
+     * @return \Zainaldeen\Sanctum\Contracts\HasAbilities
      */
     public function currentAccessToken();
 
     /**
      * Set the current access token for the user.
      *
-     * @param  \Laravel\Sanctum\Contracts\HasAbilities  $accessToken
-     * @return \Laravel\Sanctum\Contracts\HasApiTokens
+     * @param  \Zainaldeen\Sanctum\Contracts\HasAbilities  $accessToken
+     * @return \Zainaldeen\Sanctum\Contracts\HasApiTokens
      */
     public function withAccessToken($accessToken);
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Laravel\Sanctum;
+namespace Zainaldeen\Sanctum;
 
 use Illuminate\Database\Eloquent\Model;
-use Laravel\Sanctum\Contracts\HasAbilities;
+use Zainaldeen\Sanctum\Contracts\HasAbilities;
 
 class PersonalAccessToken extends Model implements HasAbilities
 {
@@ -25,6 +25,7 @@ class PersonalAccessToken extends Model implements HasAbilities
     protected $fillable = [
         'name',
         'token',
+        'refresh_token',
         'abilities',
     ];
 

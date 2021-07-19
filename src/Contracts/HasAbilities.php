@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Sanctum\Contracts;
+namespace Zainaldeen\Sanctum\Contracts;
 
 interface HasAbilities
 {

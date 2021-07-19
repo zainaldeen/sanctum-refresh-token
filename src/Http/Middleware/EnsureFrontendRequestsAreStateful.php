@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Sanctum\Http\Middleware;
+namespace Zainaldeen\Sanctum\Http\Middleware;
 
 use Illuminate\Routing\Pipeline;
 use Illuminate\Support\Collection;

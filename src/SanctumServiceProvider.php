@@ -1,14 +1,14 @@
 <?php
 
-namespace Laravel\Sanctum;
+namespace Zainaldeen\Sanctum;
 
 use Illuminate\Auth\RequestGuard;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
-use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
+use Zainaldeen\Sanctum\Http\Controllers\CsrfCookieController;
+use Zainaldeen\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
 
 class SanctumServiceProvider extends ServiceProvider
 {

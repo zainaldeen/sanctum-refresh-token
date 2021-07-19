@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Sanctum;
+namespace Zainaldeen\Sanctum;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
@@ -10,7 +10,7 @@ class NewAccessToken implements Arrayable, Jsonable
     /**
      * The access token instance.
      *
-     * @var \Laravel\Sanctum\PersonalAccessToken
+     * @var \Zainaldeen\Sanctum\PersonalAccessToken
      */
     public $accessToken;
 
@@ -22,16 +22,25 @@ class NewAccessToken implements Arrayable, Jsonable
     public $plainTextToken;
 
     /**
+     * The plain text version of the token.
+     *
+     * @var string
+     */
+    public $refreshTokenPlainText;
+
+    /**
      * Create a new access token result.
      *
-     * @param  \Laravel\Sanctum\PersonalAccessToken  $accessToken
+     * @param  \Zainaldeen\Sanctum\PersonalAccessToken  $accessToken
      * @param  string  $plainTextToken
      * @return void
      */
-    public function __construct(PersonalAccessToken $accessToken, string $plainTextToken)
+    public function __construct(PersonalAccessToken $accessToken, string $plainTextToken, string $refreshTokenPlainText)
     {
         $this->accessToken = $accessToken;
         $this->plainTextToken = $plainTextToken;
+        $this->refreshTokenPlainText = $refreshTokenPlainText;
+
     }
 
     /**
@@ -44,6 +53,7 @@ class NewAccessToken implements Arrayable, Jsonable
         return [
             'accessToken' => $this->accessToken,
             'plainTextToken' => $this->plainTextToken,
+            'refreshTokenPlainText' => $this->refreshTokenPlainText
         ];
     }
 
